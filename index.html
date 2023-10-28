@@ -8,5 +8,118 @@
 </head>
 <body>
     <!-- testing purpose only-->
+    PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git init
+Initialized empty Git repository in C:/Users/HARI_JOHNSON/Desktop/test_repo/test_repo2/.git/
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git add .
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git commit -m "new file are ready to ush on origin master " 
+[master (root-commit) c50028b] new file are ready to ush on origin master
+ 3 files changed, 15 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 script.js
+ create mode 100644 style.css
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git remote add origin https://github.com/Harijohnson/test_repo2.git
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 544 bytes | 544.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Harijohnson/test_repo2/pull/new/master
+remote:
+To https://github.com/Harijohnson/test_repo2.git
+ * [new branch]      master -> master
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git push origin main  
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Harijohnson/test_repo2.git'
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git branch
+* master
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git branch -M main
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git push origin main
+To https://github.com/Harijohnson/test_repo2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Harijohnson/test_repo2.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git push -u origin main  
+To https://github.com/Harijohnson/test_repo2.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Harijohnson/test_repo2.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git pull origin main
+From https://github.com/Harijohnson/test_repo2
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git pull origin master --allow-unrelated-histories
+From https://github.com/Harijohnson/test_repo2
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git pull origin main --allow-unrelated-histories  
+From https://github.com/Harijohnson/test_repo2
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> git push origin main  
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 396 bytes | 396.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Harijohnson/test_repo2.git
+   c98371d..3c90be5  main -> main
+PS C:\Users\HARI_JOHNSON\Desktop\test_repo\test_repo2> 
 </body>
 </html>
